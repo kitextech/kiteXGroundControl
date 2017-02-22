@@ -681,13 +681,13 @@
         <!--View Controller-->
         <scene sceneID="gqV-Qe-R91">
             <objects>
-                <viewController id="Yjb-kh-aGF" customClass="ViewController" customModule="firstMacApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Yjb-kh-aGF" customClass="ViewController" customModule="kiteXGroundControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="Zeb-m1-G20">
-                        <rect key="frame" x="0.0" y="0.0" width="761" height="473"/>
+                        <rect key="frame" x="0.0" y="0.0" width="599" height="481"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5n3-hq-Nfi">
-                                <rect key="frame" x="243" y="408" width="68" height="17"/>
+                                <rect key="frame" x="162" y="416" width="68" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Serial Port" id="ua8-Ux-6FK">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -695,7 +695,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-FQ-GQd">
-                                <rect key="frame" x="257" y="374" width="54" height="17"/>
+                                <rect key="frame" x="176" y="382" width="54" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pixhawk" id="4IN-2G-HqP">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -703,7 +703,7 @@
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qVZ-v4-JsJ">
-                                <rect key="frame" x="319" y="403" width="125" height="26"/>
+                                <rect key="frame" x="238" y="411" width="125" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="2iL-Tv-5jT"/>
                                 </constraints>
@@ -718,22 +718,27 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <binding destination="Yjb-kh-aGF" name="content" keyPath="serialPortManager.availablePorts" id="dXV-Tn-a5w"/>
+                                    <binding destination="Yjb-kh-aGF" name="contentValues" keyPath="serialPortManager.availablePorts.name" previousBinding="dXV-Tn-a5w" id="MWn-cr-XHm"/>
+                                    <binding destination="Yjb-kh-aGF" name="selectedObject" keyPath="serialPort" previousBinding="MWn-cr-XHm" id="biP-Sb-hnz"/>
+                                </connections>
                             </popUpButton>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="uXq-Eg-jvU">
-                                <rect key="frame" x="150" y="348" width="461" height="5"/>
+                                <rect key="frame" x="150" y="356" width="299" height="5"/>
                             </box>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjX-7W-5EW">
-                                <rect key="frame" x="158" y="77" width="445" height="250"/>
+                                <rect key="frame" x="158" y="77" width="283" height="258"/>
                                 <clipView key="contentView" id="ppl-X7-cij">
-                                    <rect key="frame" x="1" y="1" width="443" height="248"/>
+                                    <rect key="frame" x="1" y="1" width="281" height="256"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView editable="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="WmF-sy-BUh">
-                                            <rect key="frame" x="0.0" y="0.0" width="448" height="248"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="256"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="443" height="248"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <size key="minSize" width="281" height="256"/>
+                                            <size key="maxSize" width="686" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
@@ -744,37 +749,49 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="ADt-7V-hlh">
-                                    <rect key="frame" x="428" y="1" width="16" height="248"/>
+                                    <rect key="frame" x="266" y="1" width="16" height="256"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qTR-ol-zwy">
-                                <rect key="frame" x="447" y="399" width="73" height="32"/>
+                                <rect key="frame" x="366" y="407" width="73" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MQ9-OA-SyB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="openOrClosePort:" target="Yjb-kh-aGF" id="3g6-HD-aVF"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0jj-ro-SaT">
-                                <rect key="frame" x="537" y="39" width="72" height="32"/>
+                                <rect key="frame" x="375" y="39" width="72" height="32"/>
                                 <buttonCell key="cell" type="push" title="Clear" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qi3-F6-XkO">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="clearTextView:" target="Yjb-kh-aGF" id="sRM-Mv-BtL"/>
+                                </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="ylB-aG-U83">
-                                <rect key="frame" x="320" y="374" width="49" height="18"/>
+                                <rect key="frame" x="239" y="382" width="49" height="18"/>
                                 <buttonCell key="cell" type="radio" title="USB" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="wrC-OY-bDX">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="radioButtonSelected:" target="Yjb-kh-aGF" id="Uba-tW-dMD"/>
+                                </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="NYF-Fs-b9G">
-                                <rect key="frame" x="382" y="374" width="64" height="18"/>
+                                <rect key="frame" x="301" y="382" width="64" height="18"/>
                                 <buttonCell key="cell" type="radio" title="Telem1" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4jk-lb-A8H">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="radioButtonSelected:" target="Yjb-kh-aGF" id="MU8-o0-XJt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -801,10 +818,18 @@
                             <constraint firstItem="qVZ-v4-JsJ" firstAttribute="leading" secondItem="5n3-hq-Nfi" secondAttribute="trailing" constant="12" id="x1c-Wo-tp2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clearTextViewButton" destination="0jj-ro-SaT" id="uS5-yd-tuG"/>
+                        <outlet property="openCloseButton" destination="qTR-ol-zwy" id="tv0-bL-iqb"/>
+                        <outlet property="receivedMessageTextView" destination="WmF-sy-BUh" id="jx4-UJ-dh6"/>
+                        <outlet property="telemetryRadioButton" destination="NYF-Fs-b9G" id="vDG-RZ-n6t"/>
+                        <outlet property="usbRadioButton" destination="ylB-aG-U83" id="91h-5e-wvd"/>
+                    </connections>
                 </viewController>
                 <customObject id="DI0-nH-aCz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="BVk-VD-rfK"/>
             </objects>
-            <point key="canvasLocation" x="76" y="769"/>
+            <point key="canvasLocation" x="-5.5" y="772.5"/>
         </scene>
     </scenes>
 </document>

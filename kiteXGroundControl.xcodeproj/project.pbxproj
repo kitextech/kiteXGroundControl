@@ -13,6 +13,8 @@
 		9F94D0461E5D9A760000D2B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F94D0441E5D9A760000D2B1 /* Main.storyboard */; };
 		9F94D0511E5D9A760000D2B1 /* kiteXGroundControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D0501E5D9A760000D2B1 /* kiteXGroundControlTests.swift */; };
 		9F94D05C1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D05B1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift */; };
+		9F94D0731E5D9D5C0000D2B1 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F94D0701E5D9D2E0000D2B1 /* ORSSerial.framework */; };
+		9F94D0751E5D9E750000D2B1 /* MavlinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,20 @@
 			remoteGlobalIDString = 9F94D03A1E5D9A750000D2B1;
 			remoteInfo = kiteXGroundControl;
 		};
+		9F94D06F1E5D9D2E0000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9DCA89121A2BB106009285EB;
+			remoteInfo = ORSSerial;
+		};
+		9F94D0711E5D9D2E0000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
+			remoteInfo = "ORSSerialPort Tests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +61,8 @@
 		9F94D0571E5D9A760000D2B1 /* kiteXGroundControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kiteXGroundControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F94D05B1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiteXGroundControlUITests.swift; sourceTree = "<group>"; };
 		9F94D05D1E5D9A760000D2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
+		9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MavlinkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F94D0731E5D9D5C0000D2B1 /* ORSSerial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +94,7 @@
 		9F94D0321E5D9A750000D2B1 = {
 			isa = PBXGroup;
 			children = (
+				9F94D0691E5D9D250000D2B1 /* Frameworks */,
 				9F94D03D1E5D9A750000D2B1 /* kiteXGroundControl */,
 				9F94D04F1E5D9A760000D2B1 /* kiteXGroundControlTests */,
 				9F94D05A1E5D9A760000D2B1 /* kiteXGroundControlUITests */,
@@ -100,6 +120,7 @@
 				9F94D0421E5D9A760000D2B1 /* Assets.xcassets */,
 				9F94D0441E5D9A760000D2B1 /* Main.storyboard */,
 				9F94D0471E5D9A760000D2B1 /* Info.plist */,
+				9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */,
 			);
 			path = kiteXGroundControl;
 			sourceTree = "<group>";
@@ -120,6 +141,23 @@
 				9F94D05D1E5D9A760000D2B1 /* Info.plist */,
 			);
 			path = kiteXGroundControlUITests;
+			sourceTree = "<group>";
+		};
+		9F94D0691E5D9D250000D2B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F94D06B1E5D9D2E0000D2B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F94D0701E5D9D2E0000D2B1 /* ORSSerial.framework */,
+				9F94D0721E5D9D2E0000D2B1 /* ORSSerialPort Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +253,12 @@
 			mainGroup = 9F94D0321E5D9A750000D2B1;
 			productRefGroup = 9F94D03C1E5D9A750000D2B1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9F94D06B1E5D9D2E0000D2B1 /* Products */;
+					ProjectRef = 9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9F94D03A1E5D9A750000D2B1 /* kiteXGroundControl */,
@@ -223,6 +267,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9F94D0701E5D9D2E0000D2B1 /* ORSSerial.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ORSSerial.framework;
+			remoteRef = 9F94D06F1E5D9D2E0000D2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F94D0721E5D9D2E0000D2B1 /* ORSSerialPort Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ORSSerialPort Tests.xctest";
+			remoteRef = 9F94D0711E5D9D2E0000D2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9F94D0391E5D9A750000D2B1 /* Resources */ = {
@@ -255,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F94D0751E5D9E750000D2B1 /* MavlinkController.swift in Sources */,
 				9F94D0411E5D9A760000D2B1 /* ViewController.swift in Sources */,
 				9F94D03F1E5D9A750000D2B1 /* AppDelegate.swift in Sources */,
 			);
