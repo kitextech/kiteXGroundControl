@@ -1,3 +1,6 @@
 [submodule "Vendor/Mavlink"]
 	path = Vendor/Mavlink
 	url = https://github.com/mavlink/c_library.git
+[submodule "Frameworks/ORSSerialPort"]
+	path = Frameworks/ORSSerialPort
+	url = https://github.com/armadsen/ORSSerialPort.git
