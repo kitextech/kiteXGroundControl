@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Mavlink
 
 class ViewController: NSViewController {
 
