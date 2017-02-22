@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F94D03F1E5D9A750000D2B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D03E1E5D9A750000D2B1 /* AppDelegate.swift */; };
+		9F94D0411E5D9A760000D2B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D0401E5D9A760000D2B1 /* ViewController.swift */; };
+		9F94D0431E5D9A760000D2B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F94D0421E5D9A760000D2B1 /* Assets.xcassets */; };
+		9F94D0461E5D9A760000D2B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F94D0441E5D9A760000D2B1 /* Main.storyboard */; };
+		9F94D0511E5D9A760000D2B1 /* kiteXGroundControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D0501E5D9A760000D2B1 /* kiteXGroundControlTests.swift */; };
+		9F94D05C1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D05B1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F94D04D1E5D9A760000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D0331E5D9A750000D2B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F94D03A1E5D9A750000D2B1;
+			remoteInfo = kiteXGroundControl;
+		};
+		9F94D0581E5D9A760000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D0331E5D9A750000D2B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F94D03A1E5D9A750000D2B1;
+			remoteInfo = kiteXGroundControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F94D03B1E5D9A750000D2B1 /* kiteXGroundControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiteXGroundControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F94D03E1E5D9A750000D2B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F94D0401E5D9A760000D2B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F94D0421E5D9A760000D2B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F94D0451E5D9A760000D2B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F94D0471E5D9A760000D2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F94D04C1E5D9A760000D2B1 /* kiteXGroundControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kiteXGroundControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F94D0501E5D9A760000D2B1 /* kiteXGroundControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiteXGroundControlTests.swift; sourceTree = "<group>"; };
+		9F94D0521E5D9A760000D2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F94D0571E5D9A760000D2B1 /* kiteXGroundControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kiteXGroundControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F94D05B1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiteXGroundControlUITests.swift; sourceTree = "<group>"; };
+		9F94D05D1E5D9A760000D2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F94D0381E5D9A750000D2B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F94D0491E5D9A760000D2B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F94D0541E5D9A760000D2B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F94D0321E5D9A750000D2B1 = {
+			isa = PBXGroup;
+			children = (
+				9F94D03D1E5D9A750000D2B1 /* kiteXGroundControl */,
+				9F94D04F1E5D9A760000D2B1 /* kiteXGroundControlTests */,
+				9F94D05A1E5D9A760000D2B1 /* kiteXGroundControlUITests */,
+				9F94D03C1E5D9A750000D2B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F94D03C1E5D9A750000D2B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F94D03B1E5D9A750000D2B1 /* kiteXGroundControl.app */,
+				9F94D04C1E5D9A760000D2B1 /* kiteXGroundControlTests.xctest */,
+				9F94D0571E5D9A760000D2B1 /* kiteXGroundControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F94D03D1E5D9A750000D2B1 /* kiteXGroundControl */ = {
+			isa = PBXGroup;
+			children = (
+				9F94D03E1E5D9A750000D2B1 /* AppDelegate.swift */,
+				9F94D0401E5D9A760000D2B1 /* ViewController.swift */,
+				9F94D0421E5D9A760000D2B1 /* Assets.xcassets */,
+				9F94D0441E5D9A760000D2B1 /* Main.storyboard */,
+				9F94D0471E5D9A760000D2B1 /* Info.plist */,
+			);
+			path = kiteXGroundControl;
+			sourceTree = "<group>";
+		};
+		9F94D04F1E5D9A760000D2B1 /* kiteXGroundControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F94D0501E5D9A760000D2B1 /* kiteXGroundControlTests.swift */,
+				9F94D0521E5D9A760000D2B1 /* Info.plist */,
+			);
+			path = kiteXGroundControlTests;
+			sourceTree = "<group>";
+		};
+		9F94D05A1E5D9A760000D2B1 /* kiteXGroundControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F94D05B1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift */,
+				9F94D05D1E5D9A760000D2B1 /* Info.plist */,
+			);
+			path = kiteXGroundControlUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F94D03A1E5D9A750000D2B1 /* kiteXGroundControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F94D0601E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControl" */;
+			buildPhases = (
+				9F94D0371E5D9A750000D2B1 /* Sources */,
+				9F94D0381E5D9A750000D2B1 /* Frameworks */,
+				9F94D0391E5D9A750000D2B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kiteXGroundControl;
+			productName = kiteXGroundControl;
+			productReference = 9F94D03B1E5D9A750000D2B1 /* kiteXGroundControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F94D04B1E5D9A760000D2B1 /* kiteXGroundControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F94D0631E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControlTests" */;
+			buildPhases = (
+				9F94D0481E5D9A760000D2B1 /* Sources */,
+				9F94D0491E5D9A760000D2B1 /* Frameworks */,
+				9F94D04A1E5D9A760000D2B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F94D04E1E5D9A760000D2B1 /* PBXTargetDependency */,
+			);
+			name = kiteXGroundControlTests;
+			productName = kiteXGroundControlTests;
+			productReference = 9F94D04C1E5D9A760000D2B1 /* kiteXGroundControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F94D0561E5D9A760000D2B1 /* kiteXGroundControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F94D0661E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControlUITests" */;
+			buildPhases = (
+				9F94D0531E5D9A760000D2B1 /* Sources */,
+				9F94D0541E5D9A760000D2B1 /* Frameworks */,
+				9F94D0551E5D9A760000D2B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F94D0591E5D9A760000D2B1 /* PBXTargetDependency */,
+			);
+			name = kiteXGroundControlUITests;
+			productName = kiteXGroundControlUITests;
+			productReference = 9F94D0571E5D9A760000D2B1 /* kiteXGroundControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F94D0331E5D9A750000D2B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Andreas Okholm";
+				TargetAttributes = {
+					9F94D03A1E5D9A750000D2B1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					9F94D04B1E5D9A760000D2B1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F94D03A1E5D9A750000D2B1;
+					};
+					9F94D0561E5D9A760000D2B1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F94D03A1E5D9A750000D2B1;
+					};
+				};
+			};
+			buildConfigurationList = 9F94D0361E5D9A750000D2B1 /* Build configuration list for PBXProject "kiteXGroundControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F94D0321E5D9A750000D2B1;
+			productRefGroup = 9F94D03C1E5D9A750000D2B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F94D03A1E5D9A750000D2B1 /* kiteXGroundControl */,
+				9F94D04B1E5D9A760000D2B1 /* kiteXGroundControlTests */,
+				9F94D0561E5D9A760000D2B1 /* kiteXGroundControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F94D0391E5D9A750000D2B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F94D0431E5D9A760000D2B1 /* Assets.xcassets in Resources */,
+				9F94D0461E5D9A760000D2B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F94D04A1E5D9A760000D2B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F94D0551E5D9A760000D2B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F94D0371E5D9A750000D2B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F94D0411E5D9A760000D2B1 /* ViewController.swift in Sources */,
+				9F94D03F1E5D9A750000D2B1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F94D0481E5D9A760000D2B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F94D0511E5D9A760000D2B1 /* kiteXGroundControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F94D0531E5D9A760000D2B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F94D05C1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F94D04E1E5D9A760000D2B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F94D03A1E5D9A750000D2B1 /* kiteXGroundControl */;
+			targetProxy = 9F94D04D1E5D9A760000D2B1 /* PBXContainerItemProxy */;
+		};
+		9F94D0591E5D9A760000D2B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F94D03A1E5D9A750000D2B1 /* kiteXGroundControl */;
+			targetProxy = 9F94D0581E5D9A760000D2B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F94D0441E5D9A760000D2B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F94D0451E5D9A760000D2B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F94D05E1E5D9A760000D2B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F94D05F1E5D9A760000D2B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		9F94D0611E5D9A760000D2B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kiteXGroundControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.kitex.kiteXGroundControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9F94D0621E5D9A760000D2B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kiteXGroundControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.kitex.kiteXGroundControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9F94D0641E5D9A760000D2B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kiteXGroundControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.kitex.kiteXGroundControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kiteXGroundControl.app/Contents/MacOS/kiteXGroundControl";
+			};
+			name = Debug;
+		};
+		9F94D0651E5D9A760000D2B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kiteXGroundControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.kitex.kiteXGroundControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kiteXGroundControl.app/Contents/MacOS/kiteXGroundControl";
+			};
+			name = Release;
+		};
+		9F94D0671E5D9A760000D2B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kiteXGroundControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.kitex.kiteXGroundControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = kiteXGroundControl;
+			};
+			name = Debug;
+		};
+		9F94D0681E5D9A760000D2B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = kiteXGroundControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.kitex.kiteXGroundControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = kiteXGroundControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F94D0361E5D9A750000D2B1 /* Build configuration list for PBXProject "kiteXGroundControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F94D05E1E5D9A760000D2B1 /* Debug */,
+				9F94D05F1E5D9A760000D2B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F94D0601E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F94D0611E5D9A760000D2B1 /* Debug */,
+				9F94D0621E5D9A760000D2B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F94D0631E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F94D0641E5D9A760000D2B1 /* Debug */,
+				9F94D0651E5D9A760000D2B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F94D0661E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F94D0671E5D9A760000D2B1 /* Debug */,
+				9F94D0681E5D9A760000D2B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F94D0331E5D9A750000D2B1 /* Project object */;
+}
