@@ -701,10 +701,10 @@
             </objects>
             <point key="canvasLocation" x="103" y="748"/>
         </scene>
-        <!--Local Position View Controller-->
+        <!--Local Position-->
         <scene sceneID="esf-bC-pa7">
             <objects>
-                <viewController id="LFz-gZ-KTo" customClass="LocalPositionViewController" customModule="kiteXGroundControl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Local Position" id="LFz-gZ-KTo" customClass="LocalPositionViewController" customModule="kiteXGroundControl" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="JfH-6B-AyR">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>

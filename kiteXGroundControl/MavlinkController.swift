@@ -51,3 +51,20 @@ extension mavlink_message_t: CustomStringConvertible {
     }
 }
 
+extension mavlink_message_t {
+    
+    func isLocalPositionNED() -> mavlink_local_position_ned_t? {
+        
+        guard msgid == 32 else {
+            return nil
+        }
+        
+        var message = self
+        
+        var local_position_ned = mavlink_local_position_ned_t()
+        mavlink_msg_local_position_ned_decode(&message, &local_position_ned)
+        return local_position_ned
+    }
+    
+}
+

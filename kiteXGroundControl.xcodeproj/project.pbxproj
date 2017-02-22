@@ -18,6 +18,7 @@
 		9F94D0771E5DC5900000D2B1 /* LocalPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D0761E5DC5900000D2B1 /* LocalPositionViewController.swift */; };
 		9F94D0841E5DCB7C0000D2B1 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F94D07F1E5DCB690000D2B1 /* Charts.framework */; };
 		9F94D0851E5DCB7C0000D2B1 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F94D07F1E5DCB690000D2B1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F94D08B1E5DD01C0000D2B1 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D08A1E5DD01C0000D2B1 /* EventManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MavlinkController.swift; sourceTree = "<group>"; };
 		9F94D0761E5DC5900000D2B1 /* LocalPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPositionViewController.swift; sourceTree = "<group>"; };
 		9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Frameworks/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		9F94D08A1E5DD01C0000D2B1 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				9F94D0471E5D9A760000D2B1 /* Info.plist */,
 				9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */,
 				9F94D0761E5DC5900000D2B1 /* LocalPositionViewController.swift */,
+				9F94D08A1E5DD01C0000D2B1 /* EventManager.swift */,
 			);
 			path = kiteXGroundControl;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F94D08B1E5DD01C0000D2B1 /* EventManager.swift in Sources */,
 				9F94D0751E5D9E750000D2B1 /* MavlinkController.swift in Sources */,
 				9F94D0771E5DC5900000D2B1 /* LocalPositionViewController.swift in Sources */,
 				9F94D0411E5D9A760000D2B1 /* ViewController.swift in Sources */,

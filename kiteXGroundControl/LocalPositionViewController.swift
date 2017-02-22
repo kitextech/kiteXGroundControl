@@ -8,16 +8,24 @@
 
 import Cocoa
 import Charts
+import Mavlink
 
 class LocalPositionViewController: NSViewController {
     
     
     @IBOutlet weak var lineChartView: LineChartView!
     
+    let eventManager = EventManager.shared
+    var events = [mavlink_local_position_ned_t]()
+    
+    
     
     override open func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        eventManager.NEDObserver = self
+        
         
         // Do any additional setup after loading the view.
         let ys1 = Array(1..<10).map { x in return sin(Double(x) / 2.0 / 3.141 * 1.5) }
@@ -38,12 +46,33 @@ class LocalPositionViewController: NSViewController {
         
         self.lineChartView.gridBackgroundColor = NSUIColor.white
         
-        self.lineChartView.chartDescription?.text = "Linechart Demo"
+        self.lineChartView.chartDescription?.text = "Local Position NED"
     }
     
     override open func viewWillAppear()
     {
         self.lineChartView.animate(xAxisDuration: 0.0, yAxisDuration: 1.0)
     }
+    
+    
+    func plot() {
+        
+        let datasetValues = events.map { event in return ChartDataEntry(x: Double(event.x), y: Double(event.y)) }
+        
+        let data = LineChartData()
+        let ds1 = LineChartDataSet(values: datasetValues, label: "Poition")
+        ds1.colors = [NSUIColor.red]
+        data.addDataSet(ds1)
+        
+        self.lineChartView.data = data
+    }
 
+}
+
+extension LocalPositionViewController: LocalPositionNEDObserver {
+    
+    func newPosition(event: mavlink_local_position_ned_t) {
+        events.append(event)
+        plot()
+    }
 }

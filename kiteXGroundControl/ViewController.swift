@@ -198,6 +198,12 @@ extension ViewController: ORSSerialPortDelegate {
             var status = mavlink_status_t()
             let channel = UInt8(MAVLINK_COMM_1.rawValue)
             if mavlink_parse_char(channel, byte, &message, &status) != 0 {
+                
+                if let posNED = message.isLocalPositionNED(), let nedObserver = EventManager.shared.NEDObserver {
+                    
+                    nedObserver.newPosition(event: posNED)
+                }
+                
                 receivedMessageTextView.textStorage?.mutableString.append(message.description)
                 receivedMessageTextView.needsDisplay = true
             }
