@@ -15,6 +15,9 @@
 		9F94D05C1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D05B1E5D9A760000D2B1 /* kiteXGroundControlUITests.swift */; };
 		9F94D0731E5D9D5C0000D2B1 /* ORSSerial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F94D0701E5D9D2E0000D2B1 /* ORSSerial.framework */; };
 		9F94D0751E5D9E750000D2B1 /* MavlinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */; };
+		9F94D0771E5DC5900000D2B1 /* LocalPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F94D0761E5DC5900000D2B1 /* LocalPositionViewController.swift */; };
+		9F94D0841E5DCB7C0000D2B1 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F94D07F1E5DCB690000D2B1 /* Charts.framework */; };
+		9F94D0851E5DCB7C0000D2B1 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F94D07F1E5DCB690000D2B1 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,49 @@
 			remoteGlobalIDString = 9D7472131B6D7767002D8B10;
 			remoteInfo = "ORSSerialPort Tests";
 		};
+		9F94D07E1E5DCB690000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		9F94D0801E5DCB690000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		9F94D0821E5DCB690000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		9F94D0861E5DCB7C0000D2B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F94D0881E5DCB7C0000D2B1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F94D0851E5DCB7C0000D2B1 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9F94D03B1E5D9A750000D2B1 /* kiteXGroundControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiteXGroundControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +108,8 @@
 		9F94D05D1E5D9A760000D2B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ORSSerialPort.xcodeproj; path = "Frameworks/ORSSerialPort/Framework Project/ORSSerialPort.xcodeproj"; sourceTree = "<group>"; };
 		9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MavlinkController.swift; sourceTree = "<group>"; };
+		9F94D0761E5DC5900000D2B1 /* LocalPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalPositionViewController.swift; sourceTree = "<group>"; };
+		9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Frameworks/Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F94D0731E5D9D5C0000D2B1 /* ORSSerial.framework in Frameworks */,
+				9F94D0841E5DCB7C0000D2B1 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +169,7 @@
 				9F94D0441E5D9A760000D2B1 /* Main.storyboard */,
 				9F94D0471E5D9A760000D2B1 /* Info.plist */,
 				9F94D0741E5D9E750000D2B1 /* MavlinkController.swift */,
+				9F94D0761E5DC5900000D2B1 /* LocalPositionViewController.swift */,
 			);
 			path = kiteXGroundControl;
 			sourceTree = "<group>";
@@ -146,6 +195,7 @@
 		9F94D0691E5D9D250000D2B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */,
 				9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */,
 			);
 			name = Frameworks;
@@ -160,6 +210,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9F94D0791E5DCB690000D2B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F94D07F1E5DCB690000D2B1 /* Charts.framework */,
+				9F94D0811E5DCB690000D2B1 /* ChartsRealm.framework */,
+				9F94D0831E5DCB690000D2B1 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,10 +230,12 @@
 				9F94D0371E5D9A750000D2B1 /* Sources */,
 				9F94D0381E5D9A750000D2B1 /* Frameworks */,
 				9F94D0391E5D9A750000D2B1 /* Resources */,
+				9F94D0881E5DCB7C0000D2B1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9F94D0871E5DCB7C0000D2B1 /* PBXTargetDependency */,
 			);
 			name = kiteXGroundControl;
 			productName = kiteXGroundControl;
@@ -255,6 +317,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 9F94D0791E5DCB690000D2B1 /* Products */;
+					ProjectRef = 9F94D0781E5DCB690000D2B1 /* Charts.xcodeproj */;
+				},
+				{
 					ProductGroup = 9F94D06B1E5D9D2E0000D2B1 /* Products */;
 					ProjectRef = 9F94D06A1E5D9D2E0000D2B1 /* ORSSerialPort.xcodeproj */;
 				},
@@ -281,6 +347,27 @@
 			fileType = wrapper.cfbundle;
 			path = "ORSSerialPort Tests.xctest";
 			remoteRef = 9F94D0711E5D9D2E0000D2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F94D07F1E5DCB690000D2B1 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 9F94D07E1E5DCB690000D2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F94D0811E5DCB690000D2B1 /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 9F94D0801E5DCB690000D2B1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9F94D0831E5DCB690000D2B1 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 9F94D0821E5DCB690000D2B1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -317,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F94D0751E5D9E750000D2B1 /* MavlinkController.swift in Sources */,
+				9F94D0771E5DC5900000D2B1 /* LocalPositionViewController.swift in Sources */,
 				9F94D0411E5D9A760000D2B1 /* ViewController.swift in Sources */,
 				9F94D03F1E5D9A750000D2B1 /* AppDelegate.swift in Sources */,
 			);
@@ -350,6 +438,11 @@
 			isa = PBXTargetDependency;
 			target = 9F94D03A1E5D9A750000D2B1 /* kiteXGroundControl */;
 			targetProxy = 9F94D0581E5D9A760000D2B1 /* PBXContainerItemProxy */;
+		};
+		9F94D0871E5DCB7C0000D2B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 9F94D0861E5DCB7C0000D2B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -458,6 +551,7 @@
 		9F94D0611E5D9A760000D2B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = kiteXGroundControl/Info.plist;
@@ -472,6 +566,7 @@
 		9F94D0621E5D9A760000D2B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = kiteXGroundControl/Info.plist;

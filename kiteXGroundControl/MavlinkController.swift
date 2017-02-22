@@ -26,7 +26,9 @@ extension mavlink_message_t: CustomStringConvertible {
             mavlink_msg_attitude_decode(&message, &attitude)
             return "ATTITUDE roll: \(attitude.roll) pitch: \(attitude.pitch) yaw: \(attitude.yaw)\n"
         case 32:
-            return "LOCAL_POSITION_NED\n"
+            var local_position_ned = mavlink_local_position_ned_t()
+            mavlink_msg_local_position_ned_decode(&message, &local_position_ned)
+            return "LOCAL POSITION NED x: \(local_position_ned.x) y: \(local_position_ned.y) z: \(local_position_ned.z)\n"
         case 33:
             return "GLOBAL_POSITION_INT\n"
         case 74:

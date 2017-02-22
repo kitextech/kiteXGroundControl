@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "170417D911EDFBE5BFF623FFDEF01D0161F970E4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5A811E91F5DFF59170683E14D2C5755F19DE18CB" : 9223372036854775807,
+    "170417D911EDFBE5BFF623FFDEF01D0161F970E4" : 9223372036854775807,
+    "9025163822AAEA7A2D8AC9210D0874A56F62B462" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B634EDB0-21BE-46E1-ABD2-D0CAD4FDCEED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5A811E91F5DFF59170683E14D2C5755F19DE18CB" : "kiteXGroundControl\/Frameworks\/ORSSerialPort\/",
+    "170417D911EDFBE5BFF623FFDEF01D0161F970E4" : "kiteXGroundControl\/",
+    "9025163822AAEA7A2D8AC9210D0874A56F62B462" : "kiteXGroundControl\/Frameworks\/Charts\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "kiteXGroundControl",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "kiteXGroundControl.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:kitextech\/kiteXGroundControl.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "170417D911EDFBE5BFF623FFDEF01D0161F970E4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/armadsen\/ORSSerialPort.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5A811E91F5DFF59170683E14D2C5755F19DE18CB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/danielgindi\/Charts.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9025163822AAEA7A2D8AC9210D0874A56F62B462"
+    }
+  ]
+}
