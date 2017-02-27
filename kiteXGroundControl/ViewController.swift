@@ -16,6 +16,11 @@ class ViewController: NSViewController {
     
     let serialPortManager = ORSSerialPortManager.shared()
     
+    var systemId: UInt8? = 1
+    var compId: UInt8? = 1
+    var timer: Timer?
+    
+    
     var serialPort: ORSSerialPort? {
         didSet {
             oldValue?.close()
@@ -27,10 +32,27 @@ class ViewController: NSViewController {
         }
     }
     
+    var serialPort2: ORSSerialPort? {
+        didSet {
+            oldValue?.close()
+            oldValue?.delegate = nil
+            serialPort2?.delegate = self
+            serialPort2?.baudRate = 57600
+            serialPort2?.numberOfStopBits = 1
+            serialPort2?.parity = .none
+        }
+    }
+    
+    
+    @IBOutlet weak var thrustSlider: NSSlider!
+    @IBOutlet weak var controlToggle: NSButton!
+    
+    
     
     // MARK: IBOutlets
     
     @IBOutlet weak var openCloseButton: NSButton!
+    @IBOutlet weak var openCloseButton2: NSButton!
     @IBOutlet weak var usbRadioButton: NSButton!
     @IBOutlet weak var telemetryRadioButton: NSButton!
     @IBOutlet var receivedMessageTextView: NSTextView!
@@ -142,6 +164,28 @@ class ViewController: NSViewController {
         }
     }
     
+    @IBAction func openOrClosePort2(_ sender: Any) {
+        guard let port = serialPort2 else {
+            return
+        }
+        
+        if port.isOpen {
+            port.close()
+        }
+        else {
+            clearTextView(self)
+            port.open()
+            
+            if usbRadioButton.state != 0 {
+                startUsbMavlinkSession()
+            }
+        }
+
+        
+    }
+    
+    
+    
     @IBAction func clearTextView(_ sender: AnyObject) {
         self.receivedMessageTextView.textStorage?.mutableString.setString("")
     }
@@ -150,6 +194,37 @@ class ViewController: NSViewController {
         // No-op - required to make radio buttons behave as a group
     }
 
+    
+    @IBAction func offboardToggle(_ sender: NSButton) {
+        
+        print(self.thrustSlider.doubleValue)
+        
+        print(sender.state)
+        
+        if (sender.state == NSOnState) {
+            
+            print("prepare offboard control ")
+            
+            sendOffboardEnable(on: true)
+            
+            timer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) {_ in
+                
+                if let serialPort = self.serialPort, let systemId = self.systemId, let compId = self.compId {
+                    
+                    var msg = MavlinkController.attitudeTarget(systemId: systemId, compId: compId, thrust: self.thrustSlider.floatValue/100)
+                    serialPort.send(msg.data())
+                    
+                }
+            }
+            
+        } else {
+            timer?.invalidate()
+            sendOffboardEnable(on: false)
+        }
+        
+        
+    }
+    
 
 
 }
@@ -158,11 +233,20 @@ class ViewController: NSViewController {
 extension ViewController: ORSSerialPortDelegate {
     
     func serialPortWasOpened(_ serialPort: ORSSerialPort) {
-        openCloseButton.title = "Close"
+        if (self.serialPort?.name == serialPort.name) {
+            openCloseButton.title = "Close"
+        } else {
+            openCloseButton2.title = "Close"
+        }
+        
     }
     
     func serialPortWasClosed(_ serialPort: ORSSerialPort) {
-        openCloseButton.title = "Open"
+        if (self.serialPort?.name == serialPort.name) {
+            openCloseButton.title = "Open"
+        } else {
+            openCloseButton2.title = "Open"
+        }
     }
     
     //    func serialPortWasRemoved(fromSystem serialPort: ORSSerialPort) {
@@ -199,6 +283,11 @@ extension ViewController: ORSSerialPortDelegate {
             let channel = UInt8(MAVLINK_COMM_1.rawValue)
             if mavlink_parse_char(channel, byte, &message, &status) != 0 {
                 
+                
+                systemId = message.sysid // Only handles one drone
+                compId = message.compid
+                //                print("SystemId: \(message.sysid) componentId: \(message.compid)")
+
                 if let posNED = message.isLocalPositionNED(), let nedObserver = EventManager.shared.NEDObserver {
                     
                     nedObserver.newPosition(event: posNED)
@@ -206,6 +295,7 @@ extension ViewController: ORSSerialPortDelegate {
                 
                 receivedMessageTextView.textStorage?.mutableString.append(message.description)
                 receivedMessageTextView.needsDisplay = true
+                
             }
         }
     }
@@ -213,8 +303,28 @@ extension ViewController: ORSSerialPortDelegate {
     func serialPort(_ serialPort: ORSSerialPort, didEncounterError error: Error) {
         print("SerialPort \(serialPort.name) encountered an error: \(error)")
     }
+    
+    func sendOffboardEnable(on: Bool) {
+        
+        if let serialPort = self.serialPort, let systemId = self.systemId, let compId = self.compId {
+            let flag = Float(on ? 1 : 0)
+            
+            var com = mavlink_command_long_t()
+            com.target_system = systemId
+            com.target_component = compId // Thiss seems right
+            com.command = UInt16(MAV_CMD_NAV_GUIDED_ENABLE.rawValue)
+            com.confirmation = UInt8(true)
+            com.param1 = flag // // flag >0.5 => start, <0.5 => stop
+            
+            
+            var message = mavlink_message_t()
+            mavlink_msg_command_long_encode(systemId, compId, &message, &com);
+            
+            serialPort.send(message.data())
+            
+        }
+    }
 }
-
 
 extension ViewController: NSUserNotificationCenterDelegate {
     

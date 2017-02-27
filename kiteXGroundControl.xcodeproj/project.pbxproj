@@ -659,6 +659,7 @@
 				9F94D0621E5D9A760000D2B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F94D0631E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControlTests" */ = {
 			isa = XCConfigurationList;
@@ -667,6 +668,7 @@
 				9F94D0651E5D9A760000D2B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9F94D0661E5D9A760000D2B1 /* Build configuration list for PBXNativeTarget "kiteXGroundControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -675,6 +677,7 @@
 				9F94D0681E5D9A760000D2B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
