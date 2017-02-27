@@ -16,9 +16,13 @@ class ViewController: NSViewController {
     
     let serialPortManager = ORSSerialPortManager.shared()
     
-    var systemId: UInt8? = 1
-    var compId: UInt8? = 1
+    var systemId: UInt8 = 255
+    var compId: UInt8 = 0
+    var targetSystemId: UInt8?
+    var autopilotId: UInt8?
     var timer: Timer?
+    
+    var count: Int = 0
     
     
     var serialPort: ORSSerialPort? {
@@ -197,25 +201,34 @@ class ViewController: NSViewController {
     
     @IBAction func offboardToggle(_ sender: NSButton) {
         
-        print(self.thrustSlider.doubleValue)
-        
-        print(sender.state)
-        
         if (sender.state == NSOnState) {
             
             print("prepare offboard control ")
             
-            sendOffboardEnable(on: true)
+//            sendOffboardEnable(on: true) Enable doesn't work before a value has been send
             
-            timer = Timer.scheduledTimer(withTimeInterval: 0.25, repeats: true) {_ in
+            timer = Timer(timeInterval: 0.10, repeats: true, block: { _ in
                 
-                if let serialPort = self.serialPort, let systemId = self.systemId, let compId = self.compId {
+                
+                print("Thrust \(self.thrustSlider.floatValue)")
+                
+                
+                if let serialPort = self.serialPort, let targetSystemId = self.targetSystemId, let targetComponentId = self.autopilotId {
                     
-                    var msg = MavlinkController.attitudeTarget(systemId: systemId, compId: compId, thrust: self.thrustSlider.floatValue/100)
+                    
+                    var msg = MavlinkController.attitudeTarget(systemId: self.systemId, compId: self.compId, targetSystem: targetSystemId, targetComponent: targetComponentId, thrust: self.thrustSlider.floatValue/100)
+                    
                     serialPort.send(msg.data())
                     
                 }
+                
+            })
+            
+            guard let timer = timer else {
+                return
             }
+            
+            RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
             
         } else {
             timer?.invalidate()
@@ -284,8 +297,8 @@ extension ViewController: ORSSerialPortDelegate {
             if mavlink_parse_char(channel, byte, &message, &status) != 0 {
                 
                 
-                systemId = message.sysid // Only handles one drone
-                compId = message.compid
+                targetSystemId = message.sysid // Only handles one drone
+                autopilotId = message.compid
                 //                print("SystemId: \(message.sysid) componentId: \(message.compid)")
 
                 if let posNED = message.isLocalPositionNED(), let nedObserver = EventManager.shared.NEDObserver {
@@ -306,12 +319,12 @@ extension ViewController: ORSSerialPortDelegate {
     
     func sendOffboardEnable(on: Bool) {
         
-        if let serialPort = self.serialPort, let systemId = self.systemId, let compId = self.compId {
+        if let serialPort = self.serialPort, let targetSystemId = self.targetSystemId, let autopilotId = self.autopilotId {
             let flag = Float(on ? 1 : 0)
             
             var com = mavlink_command_long_t()
-            com.target_system = systemId
-            com.target_component = compId // Thiss seems right
+            com.target_system = targetSystemId
+            com.target_component = autopilotId // Thiss seems right
             com.command = UInt16(MAV_CMD_NAV_GUIDED_ENABLE.rawValue)
             com.confirmation = UInt8(true)
             com.param1 = flag // // flag >0.5 => start, <0.5 => stop

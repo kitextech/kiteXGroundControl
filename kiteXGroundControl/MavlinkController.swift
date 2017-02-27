@@ -13,9 +13,9 @@ import Mavlink
 
 struct MavlinkController {
     
-    static func attitudeTarget(systemId: UInt8, compId: UInt8, thrust: Float32) -> mavlink_message_t {
+    static func attitudeTarget(systemId: UInt8, compId: UInt8, targetSystem: UInt8, targetComponent: UInt8, thrust: Float32) -> mavlink_message_t {
         
-        var attitudeTarget = mavlink_attitude_target_t()
+        var setAttitudeTarget = mavlink_set_attitude_target_t()
         
         //        time_boot_ms          uint32_t	Timestamp in milliseconds since system boot
         //        target_system         uint8_t     System ID
@@ -28,20 +28,23 @@ struct MavlinkController {
         //        thrust                float       Collective thrust, normalized to 0 .. 1 (-1 .. 1 for vehicles capable of reverse trust)
         
         
-        attitudeTarget.time_boot_ms = UInt32(ProcessInfo.processInfo.systemUptime * 1000)
-        attitudeTarget.type_mask = UInt8(0) // Bitmask should work for now.
-
-        attitudeTarget.q = (1,0,0,0)
-
-        attitudeTarget.body_roll_rate = 0
-        attitudeTarget.body_pitch_rate = 0
-        attitudeTarget.body_yaw_rate = 0
+        setAttitudeTarget.time_boot_ms = UInt32(ProcessInfo.processInfo.systemUptime * 1000)
+        setAttitudeTarget.type_mask = UInt8(0) // Bitmask should work for now.
         
-        attitudeTarget.thrust = thrust
+        setAttitudeTarget.q = (1,0,0,0)
+        
+        setAttitudeTarget.body_roll_rate = 0
+        setAttitudeTarget.body_pitch_rate = 0
+        setAttitudeTarget.body_yaw_rate = 0
+        
+        setAttitudeTarget.thrust = thrust
+        
+        setAttitudeTarget.target_component = targetComponent
+        setAttitudeTarget.target_system = targetSystem
         
         var msg = mavlink_message_t()
         
-        mavlink_msg_attitude_target_encode(systemId, compId, &msg, &attitudeTarget)
+        mavlink_msg_set_attitude_target_encode(systemId, compId, &msg, &setAttitudeTarget)
         
         return msg
     }

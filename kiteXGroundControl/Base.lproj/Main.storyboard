@@ -848,7 +848,7 @@
                             </button>
                             <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-6T-Bjc">
                                 <rect key="frame" x="445" y="245" width="296" height="19"/>
-                                <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="fZ4-tc-WL2"/>
+                                <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="fZ4-tc-WL2"/>
                             </slider>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="7Sy-L4-dJ0">
                                 <rect key="frame" x="561" y="268" width="64" height="18"/>
